@@ -1,0 +1,26 @@
+{
+  "name": "lhc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "author": "Kostyantyn Beskrovnyy",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.2",
+    "fast-xml-parser": "^4.0.0-beta.8",
+    "fs": "^0.0.1-security",
+    "node-fetch": "^3.1.0",
+    "socket.io": "^4.4.0",
+    "socket.io-client": "^4.4.0",
+    "xml-js": "^1.6.11",
+    "xml2js": "^0.4.23",
+    "xml2json": "^0.12.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}

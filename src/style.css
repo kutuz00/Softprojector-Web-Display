@@ -1,0 +1,89 @@
+* {
+  margin: 0, auto;
+  padding: 0, auto;
+}
+body {
+  background-color: rgba(0, 0, 0, 0);
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+.container {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  box-sizing: border-box;
+}
+.wrap {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: space-between;
+  -webkit-animation: slide-top 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: slide-top 1.5s 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+/* Change bellow to modify color and transparency of lower third block */
+#lower-third {
+  background-image: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.7),
+    rgba(0, 0, 0, 0.35),
+    rgba(0, 0, 0, 0)
+  );
+  display: flex;
+  flex-direction: column;
+  height: 20vh;
+  width: 100%;
+  justify-content: space-between;
+  padding: 15px;
+  box-sizing: border-box;
+}
+.lower-third-wrap {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  box-sizing: border-box;
+  height: 100%;
+}
+/* Change bellow to style reference line */
+.reference {
+  color: seashell;
+  height: 35%;
+  line-height: 100%;
+  font-family: Verdana, Tahoma, sans-serif;
+  box-sizing: border-box;
+  font-size: 3vh;
+  border-bottom: 5px solid yellowgreen;
+  text-transform: uppercase;
+  animation: focus-in-reference 2.8s ease normal both;
+}
+
+.spacer {
+  max-height: 10px;
+}
+/* Change bellow to style text */
+.sp-text {
+  color: seashell;
+  height: 65%;
+  font-size: 2.5vh;
+  box-sizing: border-box;
+  font-family: "Segoe UI", "Open Sans", "Helvetica Neue", sans-serif;
+  text-align: right;
+  width: 92%;
+  align-self: center;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+/* Comment bellow to use it without animation */
+@keyframes focus-in-reference {
+  0% {
+    letter-spacing: -0.5em;
+    filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    filter: blur(0);
+    opacity: 1;
+  }
+}
