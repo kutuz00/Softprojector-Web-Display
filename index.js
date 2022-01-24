@@ -33,6 +33,7 @@ client.on("connect", (socket) => {
           .on("end", () => {
             data = xmlToJson.toJson(data);
             const softprojectorData = JSON.parse(data);
+            console.log(softprojectorData.softprojector);
             client.emit("softpojector", softprojectorData);
           })
           .on("error", (err) => {
@@ -44,5 +45,4 @@ client.on("connect", (socket) => {
       });
   }, 200);
 });
-
 httpServer.listen(4343);

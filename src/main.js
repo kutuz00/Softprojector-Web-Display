@@ -11,13 +11,19 @@ server
     const type = Object.keys(data.softprojector);
     switch (type[0]) {
       case "bible":
-        liveGraphicBlock.textContent = data.softprojector.bible[0].verse;
-        reference.textContent = data.softprojector.bible[0].reference;
+        if (Array.isArray(data.softprojector.bible)) {
+          const [primaryBible, secondaryBible, tertiaryBible] =
+            data.softprojector.bible;
+          liveGraphicBlock.textContent = primaryBible.verse;
+          reference.textContent = primaryBible.reference;
+        } else {
+          liveGraphicBlock.textContent = data.softprojector.bible.verse;
+          reference.textContent = data.softprojector.bible.reference;
+        }
         break;
       case "song":
         liveGraphicBlock.textContent = data.softprojector.song.stanza;
         reference.textContent = data.softprojector.song.number;
-        console.log(data);
         break;
       default:
         defaultState();
