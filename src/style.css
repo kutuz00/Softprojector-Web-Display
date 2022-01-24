@@ -40,15 +40,16 @@ body {
   );
   display: flex;
   flex-direction: column;
-  height: 20vh;
+  height: 22vh;
   width: 100%;
-  justify-content: space-around;
+  justify-content: space-between;
   padding: 15px;
   box-sizing: border-box;
 }
 .lower-third-wrap {
   display: flex;
   justify-content: space-between;
+  align-items: left;
   flex-direction: column;
   box-sizing: border-box;
   height: 100%;
@@ -57,7 +58,7 @@ body {
 .reference {
   color: seashell;
   margin: 0;
-  height: 35%;
+  padding: 1vh;
   line-height: 100%;
   font-family: Gilroy, sans-serif;
   box-sizing: border-box;
@@ -73,16 +74,14 @@ body {
 /* Change bellow to style text */
 .sp-text {
   color: seashell;
-  height: 65%;
-  font-size: 2.5vh;
+  font-size: 2.75vh;
   box-sizing: border-box;
   font-family: Gilroy, sans-serif;
-  text-align: right;
+  text-align: left;
   width: 92%;
-  align-self: center;
   overflow: hidden;
   padding-top: 1vh;
-  margin: 0 auto;
+  margin: auto;
 }
 
 /* Comment bellow to use it without animation */
